@@ -1,0 +1,866 @@
+/* ==========================================================
+   PURA VIDA REAL ESTATE — Single Property Template CSS
+   Paste into: Appearance → Customize → Additional CSS
+   (Replace all previous property-related CSS)
+   ========================================================== */
+
+/* --- PROPERTY WRAPPER --- */
+.pura-property-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+/* --- GALLERY HERO --- */
+.pura-gallery-hero {
+    display: grid;
+    grid-template-columns: 62% 38%;
+    gap: 6px;
+    margin-top: 130px;
+    margin-bottom: 32px;
+}
+
+.pura-gallery-main {
+    height: 520px;
+    overflow: hidden;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+}
+
+.pura-gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.pura-gallery-main:hover img {
+    transform: scale(1.02);
+}
+
+.pura-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6px;
+}
+
+.pura-grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pura-grid-item:last-child {
+    border-radius: 0 0 3px 0;
+}
+
+.pura-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.pura-grid-item:hover img {
+    transform: scale(1.04);
+}
+
+.pura-see-all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20, 28, 38, 0.68);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 2px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.pura-see-all:hover {
+    background: rgba(20, 28, 38, 0.88);
+}
+
+/* --- INFO BAR --- */
+.pura-info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(34, 52, 75, 0.1);
+}
+
+.pura-info-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.pura-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 46px !important;
+    font-weight: 400 !important;
+    color: #22344B !important;
+    line-height: 1.15 !important;
+    margin: 0 0 22px 0 !important;
+    letter-spacing: -0.01em;
+}
+
+.pura-cta-btn {
+    display: inline-block;
+    background: rgba(201, 168, 76, 0.78);
+    color: #22344B !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 300 !important;
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    padding: 18px 60px;
+    border-radius: 50px;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    margin-bottom: 12px;
+}
+
+.pura-cta-btn:hover {
+    background: rgba(201, 168, 76, 0.82);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px rgba(201, 168, 76, 0.45);
+    transform: translateY(-1px);
+    color: #22344B !important;
+}
+
+.pura-cta-sub {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px !important;
+    color: rgba(34, 52, 75, 0.5) !important;
+    letter-spacing: 0.04em !important;
+    margin: 0 !important;
+    line-height: 1.4;
+}
+
+.pura-info-right {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.pura-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #22344B;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.pura-ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgba(34, 52, 75, 0.55);
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+
+.pura-specs {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0;
+}
+
+.pura-spec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 26px;
+    border-left: 1px solid rgba(34, 52, 75, 0.15);
+}
+
+.pura-spec:first-child {
+    border-left: none;
+}
+
+.pura-spec-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: rgba(34, 52, 75, 0.5);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.pura-spec-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    color: #22344B;
+    line-height: 1;
+}
+
+.pura-spec-icon {
+    display: block;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+/* --- TABS --- */
+.pura-tabs-wrap {
+    margin-top: 0;
+}
+
+.pura-tabs-nav {
+    display: flex;
+    border-bottom: 1px solid rgba(34, 52, 75, 0.12);
+    margin-bottom: 52px;
+    gap: 0;
+}
+
+.pura-tab {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 18px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(34, 52, 75, 0.45);
+    cursor: pointer;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+}
+
+.pura-tab.active,
+.pura-tab:hover {
+    color: #C9A84C;
+    border-bottom-color: #C9A84C;
+}
+
+.pura-tab-content {
+    display: none;
+}
+
+.pura-tab-content.active {
+    display: block;
+}
+
+/* --- DESCRIPTION TAB — TWO COLUMN LAYOUT --- */
+.pura-two-col {
+    display: grid;
+    grid-template-columns: 55% 42%;
+    gap: 48px;
+    align-items: start;
+}
+
+/* Description wrapper */
+.pura-description-wrap {
+    position: relative;
+}
+
+/* Description text */
+.pura-description p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.85;
+    color: #22344B;
+    margin: 0 0 24px 0;
+    text-align: left;
+    font-style: normal;
+}
+
+.pura-desc-intro {
+    font-size: 22px !important;
+    font-style: italic !important;
+    line-height: 1.65 !important;
+    color: rgba(34,52,75,0.85) !important;
+}
+
+/* Gradient fade overlay — sits below the visible paragraphs */
+.pura-desc-fade {
+    position: relative;
+    height: 80px;
+    margin-top: -80px;
+    background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 2;
+}
+
+.pura-desc-fade.hiding {
+    opacity: 0;
+}
+
+/* Reveal container — elegant height + opacity animation */
+.pura-desc-reveal {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        max-height 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.8s ease 0.15s,
+        transform 0.8s ease 0.1s;
+}
+
+.pura-desc-reveal.open {
+    max-height: 4000px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pura-desc-reveal-inner p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.85;
+    color: #22344B;
+    margin: 0 0 24px 0;
+    text-align: left;
+}
+
+/* READ MORE button */
+.pura-read-more-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0 32px;
+    position: relative;
+    z-index: 3;
+}
+
+.pura-read-more {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(34,52,75,0.55);
+    transition: color 0.25s ease;
+}
+
+.pura-read-more:hover {
+    color: #C9A84C;
+}
+
+.pura-read-more .pura-rm-line {
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.pura-read-more:hover .pura-rm-line {
+    width: 48px;
+}
+
+.pura-read-more.open {
+    color: rgba(34,52,75,0.4);
+}
+
+/* Features sidebar (shown in Description tab) */
+.pura-features-sidebar {
+    background: #F5F5F0;
+    border-radius: 3px;
+    padding: 28px;
+}
+
+.pura-features-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 32px !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.01em !important;
+    color: #22344B !important;
+    margin: 0 0 4px 0 !important;
+    text-align: center;
+    line-height: 1.2 !important;
+    text-transform: none !important;
+}
+
+.pura-features-title::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: #C9A84C;
+    margin: 10px auto 20px;
+}
+
+/* Description column section heading */
+.pura-col-heading {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 32px !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.01em !important;
+    color: #22344B !important;
+    text-transform: none !important;
+    margin: 0 0 4px 0 !important;
+    text-align: left;
+    line-height: 1.2 !important;
+}
+
+.pura-col-heading::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #C9A84C;
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+
+/* Content section (replaces tabs) */
+.pura-content-section {
+    padding-top: 56px;
+}
+
+/* Downloads tab */
+.pura-downloads-wrap {
+    padding: 48px 0;
+    text-align: center;
+}
+
+.pura-downloads-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: rgba(34, 52, 75, 0.65);
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.pura-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+}
+
+.pura-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.pura-feature-check {
+    color: #C9A84C;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.pura-feature-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #22344B;
+    line-height: 1.4;
+}
+
+/* --- OVERVIEW TAB --- */
+.pura-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(34, 52, 75, 0.08);
+    border: 1px solid rgba(34, 52, 75, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.pura-ov-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 22px;
+    background: #fff;
+}
+
+.pura-ov-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: rgba(34, 52, 75, 0.45);
+    text-transform: uppercase;
+}
+
+.pura-ov-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    color: #22344B;
+    line-height: 1.2;
+}
+
+.pura-map-wrap {
+    border-radius: 3px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.pura-map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* --- FEATURES TAB (standalone) --- */
+.pura-features-full {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 32px;
+}
+
+/* --- LIGHTBOX --- */
+.pura-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 28, 38, 0.95);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+}
+
+.pura-lightbox.open {
+    display: flex;
+}
+
+.pura-lb-img-wrap {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pura-lb-img-wrap img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.pura-lb-close,
+.pura-lb-prev,
+.pura-lb-next {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    transition: background 0.2s, border-color 0.2s;
+    z-index: 100000;
+    border-radius: 4px;
+}
+
+.pura-lb-close:hover,
+.pura-lb-prev:hover,
+.pura-lb-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255,255,255,0.4);
+}
+
+.pura-lb-close {
+    top: 24px;
+    right: 28px;
+    padding: 10px 16px;
+    font-size: 22px;
+}
+
+.pura-lb-prev {
+    left: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 22px 28px;
+    font-size: 46px;
+}
+
+.pura-lb-next {
+    right: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 22px 28px;
+    font-size: 46px;
+}
+
+/* ==========================================================
+   RESPONSIVE — TABLET (768px – 1024px)
+   ========================================================== */
+@media (max-width: 1024px) {
+
+    .pura-gallery-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .pura-gallery-main {
+        height: 420px;
+        border-radius: 3px;
+    }
+
+    .pura-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        height: 140px;
+    }
+
+    .pura-info-bar {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .pura-info-right {
+        text-align: left;
+        width: 100%;
+    }
+
+    .pura-price {
+        font-size: 34px;
+    }
+
+    .pura-specs {
+        justify-content: flex-start;
+    }
+
+    .pura-spec:first-child {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .pura-two-col {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .pura-overview-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pura-features-full {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE — MOBILE (< 768px)
+   ========================================================== */
+@media (max-width: 767px) {
+
+    .pura-gallery-main {
+        height: 260px;
+    }
+
+    .pura-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        height: 110px;
+    }
+
+    .pura-title {
+        font-size: 30px !important;
+    }
+
+    .pura-price {
+        font-size: 28px;
+    }
+
+    .pura-cta-btn {
+        display: block;
+        text-align: center;
+        padding: 16px 24px;
+    }
+
+    .pura-spec-value {
+        font-size: 26px;
+    }
+
+    .pura-tabs-nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .pura-tabs-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pura-tab {
+        padding: 14px 16px;
+        font-size: 10px;
+    }
+
+    .pura-features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pura-overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pura-features-full {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pura-map-wrap {
+        height: 280px;
+    }
+
+    .pura-lb-prev,
+    .pura-lb-next {
+        font-size: 22px;
+        padding: 12px 14px;
+    }
+}
+
+/* ==========================================================
+   HEADER LOGO — centered, property pages only
+   Injected via JS in the shortcode; invisible on homepage
+   ========================================================== */
+.pura-property-page header[data-elementor-type="header"] {
+    overflow: visible !important;
+}
+
+.pura-header-logo {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 200;
+    display: block !important;
+    line-height: 0 !important;
+    text-decoration: none !important;
+    pointer-events: auto;
+}
+
+.pura-header-logo img {
+    height: 84px;
+    width: auto;
+    display: block;
+    margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+    .pura-header-logo img {
+        height: 52px;
+    }
+}
+
+/* ==========================================================
+   NAVIGATION — dark text ONLY on property single + archive
+   Uses both the custom pura-property-page class (added via PHP body_class filter)
+   and the WP-generated body classes as fallback
+   ========================================================== */
+.pura-property-page header[data-elementor-type="header"] .elementor-item,
+.pura-property-page header[data-elementor-type="header"] .elementor-item:visited,
+.pura-property-page header[data-elementor-type="header"] .elementor-item:hover,
+.pura-property-page header[data-elementor-type="header"] a,
+.single-property_item header[data-elementor-type="header"] .elementor-item,
+.single-property_item header[data-elementor-type="header"] .elementor-item:visited,
+.single-property_item header[data-elementor-type="header"] .elementor-item:hover,
+.single-property_item header[data-elementor-type="header"] a,
+.post-type-archive-property_item header[data-elementor-type="header"] .elementor-item,
+.post-type-archive-property_item header[data-elementor-type="header"] .elementor-item:visited,
+.post-type-archive-property_item header[data-elementor-type="header"] .elementor-item:hover,
+.post-type-archive-property_item header[data-elementor-type="header"] a {
+    color: #22344B !important;
+}
+
+/* ==========================================================
+   ELEMENTOR BUTTON OVERRIDES
+   Elementor Pro injects default button styles that override
+   our custom button styling — neutralise them here
+   ========================================================== */
+
+/* READ MORE button — kill Elementor pink/default button styles */
+.pura-read-more,
+.elementor-widget-html .pura-read-more,
+.elementor .pura-read-more {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    text-decoration: none !important;
+    color: rgba(34, 52, 75, 0.55) !important;
+    padding: 8px 0 !important;
+    margin: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    transition: color 0.25s ease !important;
+    cursor: pointer !important;
+}
+
+.pura-read-more:hover,
+.elementor-widget-html .pura-read-more:hover,
+.elementor .pura-read-more:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #C9A84C !important;
+}
+
+/* Tab buttons — same issue */
+.pura-tab,
+.elementor-widget-html .pura-tab,
+.elementor .pura-tab {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+}
+
+.pura-tab.active,
+.pura-tab:hover,
+.elementor-widget-html .pura-tab.active,
+.elementor-widget-html .pura-tab:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #C9A84C !important;
+    border-bottom-color: #C9A84C !important;
+    box-shadow: none !important;
+}
+
+/* Lightbox nav/close buttons */
+.pura-lb-close,
+.pura-lb-prev,
+.pura-lb-next,
+.elementor-widget-html .pura-lb-close,
+.elementor-widget-html .pura-lb-prev,
+.elementor-widget-html .pura-lb-next {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 4px !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+}
